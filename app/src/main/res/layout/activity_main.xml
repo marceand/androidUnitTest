@@ -11,7 +11,31 @@
     tools:context="com.marceme.androidunittest.MainActivity">
 
     <TextView
+        android:id="@+id/displayText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="I am doing my unit testing"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/messageEditor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter message"
+        android:layout_toStartOf="@+id/sendButton"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send"
+        android:layout_alignTop="@+id/messageEditor"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorSendBtn"
+        android:textColor="@color/colorWhite"/>
 </RelativeLayout>
